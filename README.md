@@ -2,6 +2,7 @@
 
 ## About this article
 This article will help you set up Ubuntu server and install magento 2.3.5 
+This article will also contain commands that I use so that you can easily copy and paste them.
 
 
 - 🔭 I’m currently working on ...
