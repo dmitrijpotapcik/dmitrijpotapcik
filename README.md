@@ -2,10 +2,10 @@
 
 ## About this article
 This article will help you set up Ubuntu server and install magento 2.3.5 
-This article will also contain commands that I use so that you can easily copy and paste them.
+This article will also contain commands that I use so that you can easily copy and paste them. Please note: this article for testing purpose only.
 
 
-- 🔭 I’m currently working on ...
+
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
