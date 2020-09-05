@@ -1,5 +1,7 @@
-<h1>Test</h1>
+<h1>Ubuntu Server (v16.04) set up and Magento 2.3.5 instalation</h1>
 
+## About this article
+This article will help you set up Ubuntu server and install magento 2.3.5 
 
 
 - 🔭 I’m currently working on ...
