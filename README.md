@@ -4,6 +4,48 @@
 This article will help you set up Ubuntu server and install magento 2.3.5 
 This article will also contain commands that I use so that you can easily copy and paste them. Please note: this article for testing purpose only.
 
+**1. Create a basic Ubuntu Server .**
+Build a Web Server that runs:
+Ubuntu 16.04;
+Apache;
+MySQL;
+PHP 7.2
+**Create a new user**
+Create a new superuser that we can use instead of the root user to carry out our administrative tasks.
+
+    adduser dima
+Give this user ‘superuser’ privileges by adding it to the ‘sudo’ group
+
+    usermod -aG sudo dima
+Logout as the root user and reconnect with our new user.
+Access config file to disable root user login (for security).
+
+    sudo nano /etc/ssh/sshd_config
+    
+Find “PermitRootLogin yes” and replace the “yes” with a “no”.
+Now reload the SSH Service for the changes.
+
+    sudo systemctl reload sshd
+ **Enable a basic firewall**
+ Allow SSH connections to your web server
+ 
+
+    sudo ufw allow ssh
+Turn on the firewall
+
+    sudo ufw enable
+**Creating web server**
+Convert it into a web server that is capable of installing Magento 2.3.5
+
+**Updating repositories**
+
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt-get update
+**Install Apache and configure it specifically for Magento 2.3.5**
+Apache is the software that will ultimately convert our basic server into a web server.
+
+    sudo apt-get install apache2 -y
+Open Apache settings file to allow .htaccess file usage
 
 
 <!--
