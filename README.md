@@ -46,7 +46,33 @@ Apache is the software that will ultimately convert our basic server into a web 
 
     sudo apt-get install apache2 -y
 Open Apache settings file to allow .htaccess file usage
+Open Apache settings file to allow .htaccess file usage
 
+    sudo nano /etc/apache2/sites-available/000-default.conf
+Add the below to the file, save and exit.
+
+    <Directory "/var/www/html">
+     AllowOverride All
+    </Directory>
+Open Apache settings file to set the Global ServerName
+
+    sudo nano /etc/apache2/apache2.conf
+Add this line at the end of the file, then save and exit
+
+    ServerName <server_IP>
+Check for any errors
+
+    sudo apache2ctl configtest
+Enable Apache rewrite
+
+    sudo a2enmod rewrite
+Restart Apache for any changes to take effect
+
+    sudo systemctl restart apache2
+Enable Apache through the firewall
+
+    sudo ufw allow 'Apache Full'
+To test that Apache is working, simply visit the IP address of your server. You should see a Apache2 Ubuntu default test page.
 
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
