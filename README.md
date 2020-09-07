@@ -5,11 +5,13 @@ This article will help you set up Ubuntu server and install magento 2.3.5
 This article will also contain commands that I use so that you can easily copy and paste them. Please note: this article for testing purpose only.
 
 **1. Create a basic Ubuntu Server .**
+
 Build a Web Server that runs:
 Ubuntu 16.04;
 Apache;
 MySQL;
 PHP 7.2
+
 **Create a new user**
 Create a new superuser that we can use instead of the root user to carry out our administrative tasks.
 
