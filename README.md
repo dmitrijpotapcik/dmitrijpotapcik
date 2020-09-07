@@ -7,9 +7,13 @@ This article will also contain commands that I use so that you can easily copy a
 **1. Create a basic Ubuntu Server .**
 
 Build a Web Server that runs:
+
 Ubuntu 16.04;
+
 Apache;
+
 MySQL;
+
 PHP 7.2
 
 **Create a new user**
