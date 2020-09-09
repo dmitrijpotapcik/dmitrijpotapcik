@@ -206,7 +206,7 @@ Make sure not to miss this step.
 
    **Run Setup Wizard**
 
-Go to 1.  HTTP://<your_server>/setup and hit the orange button to proceed.
+Go to HTTP://<your_server>/setup and hit the orange button to proceed.
 
 **Update memory_limit**
 
