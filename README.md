@@ -116,6 +116,30 @@ Restart Apache
 
 Just put your IP address into your browser followed by /phpmyadmin .
 
+**Download Magento 2.3**
+
+Important run commands as the correct user. The reason for creating a new user is for added security. The main user that I created before has the ability to run superuser commands if required, where the web user would never need such privileges.
+
+**Create a Magento user**
+This user will also be who you log in as to upload and download your files via FTP.
+
+Add the user 
+
+    sudo adduser magento
+    
+Make the web server group the primary group for the new user
+
+    sudo usermod -g www-data magento
+    
+**Folder permissions**
+
+When I installed Apache, it automatically created a web directory to store own web files. However, it will have created this under the default user known as www-data. So, we just need to update the folder permissions for the directory that we’ll be installing Magento. This will allow our new Magento user to operate correctly.
+
+**Update the root file ownership to coincide with our new web user**
+
+    sudo chown magento:www-data /var/www/html/
+
+
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
