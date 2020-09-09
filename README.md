@@ -190,6 +190,8 @@ Make sure not to miss this step.
 
 **Set up a user & database**
 
+ Set up an isolated MySQL User than only has access to one specific database that it owns.
+ 
  - So visit  **HTTP://<your_server>/phpmyadmin**;
  - Log in with your MySQL root credentials;
  - Once logged in, click  **User Accounts**;
