@@ -80,6 +80,19 @@ Enable Apache through the firewall
     sudo ufw allow 'Apache Full'
 To test that Apache is working, simply visit the IP address of your server. You should see a Apache2 Ubuntu default test page.
 
+**Install PHP and extensions for Magento 2.3**
+
+This commands to specify 7.2
+
+    sudo apt-get install php7.2 libapache2-mod-php7.2 php7.2-mysql php7.2-soap php7.2-bcmath php7.2-xml php7.2-mbstring php7.2-gd php7.2-common php7.2-cli php7.2-curl php7.2-intl php7.2-zip zip unzip -y
+
+Tell the web server to prefer PHP files (move index.php to front of the list)
+
+    sudo nano /etc/apache2/mods-enabled/dir.conf
+
+Restart apache for changes to take effect
+
+    sudo systemctl restart apache2
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
