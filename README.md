@@ -93,6 +93,29 @@ Tell the web server to prefer PHP files (move index.php to front of the list)
 Restart apache for changes to take effect
 
     sudo systemctl restart apache2
+
+**Install MySQL**
+
+    sudo apt-get install mysql-server -y
+
+Run a MySQL security script
+
+    sudo mysql_secure_installation
+
+**Install phpMyAdmin and secure the installation**
+
+    sudo apt-get install phpmyadmin php7.2-mbstring php7.2-gettext -y
+
+(select apache2 using your space bar before hitting ENTER)
+
+Restart Apache
+
+    sudo systemctl restart apache2
+
+**Test phpMyAdmin**
+
+Just put your IP address into your browser followed by /phpmyadmin .
+
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
