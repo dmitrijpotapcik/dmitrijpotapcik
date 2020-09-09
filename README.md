@@ -179,6 +179,30 @@ This insignificant looking dot tells composer to install it in the same director
     composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.5 .
 
 During the setup, you will be asked for a Username and a Password. Just to be clear, **Username = Public Key** and **Password = Private Key** what we created on the Magento website.
+
+**Set pre-installation permissions**
+
+Make sure not to miss this step.
+
+    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && chown -R :www-data . && chmod u+x bin/magento
+
+**Create a database for installing Magento 2.3**
+
+**Set up a user & database**
+
+ - So visit  **HTTP://<your_server>/phpmyadmin**;
+ - Log in with your MySQL root credentials;
+ - Once logged in, click  **User Accounts**;
+ - Click  **Add user account**;
+ - Enter a username;
+ - Change Host name to Local;
+ - Generate a password and write it down safe;
+ - Click the box below labelled  **“Create database with same name and
+   grant all privileges.”**, which will conveniently create a database
+   for us at the same time as creating the user; Hit  **Go**  at the
+   bottom-right of the page;
+
+   
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
