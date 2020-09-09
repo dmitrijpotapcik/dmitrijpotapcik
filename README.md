@@ -204,7 +204,28 @@ Make sure not to miss this step.
    for us at the same time as creating the user; Hit  **Go**  at the
    bottom-right of the page;
 
-   
+   **Run Setup Wizard**
+
+Go to 1.  HTTP://<your_server>/setup and hit the orange button to proceed.
+
+**Update memory_limit**
+
+By default, Magento will be using 756MB of your web servers available memory. This will commonly make Magento slow and result in some errors.
+
+Open our .htaccess file
+
+    nano .htaccess
+
+Change the instance under PHP 7
+
+    Replace 756MB with 2G
+
+**Install cron tasks**
+
+This can now be setup by running one command
+
+    bin/magento cron:install
+
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
