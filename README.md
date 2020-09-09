@@ -225,6 +225,18 @@ Change the instance under PHP 7
 This can now be setup by running one command
 
     bin/magento cron:install
+    
+**Switch to Developer Mode**
+
+    bin/magento deploy:mode:set developer
+
+Clear the cached generated folders
+
+    rm -rf generated/metadata/* generated/code/*
+
+Clear the remaining cache
+
+    bin/magento c:c
 
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
