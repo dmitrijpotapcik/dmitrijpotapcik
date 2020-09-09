@@ -139,7 +139,46 @@ When I installed Apache, it automatically created a web directory to store own w
 
     sudo chown magento:www-data /var/www/html/
 
+**Install Composer**
+Install Composer by downloading the file 
 
+    sudo curl -sS https://getcomposer.org/installer | php
+
+Move composer file to the required directory
+
+    sudo mv composer.phar /usr/local/bin/composer
+
+**Magento Access Keys**
+
+be sure to visit  https://marketplace.magento.com/ and create an account. Then you can generate a set of access keys that will allow you to download from the Magento repository via Composer.
+
+
+**Download Magento 2.3 via Composer**
+
+First we need to navigate to the web directory of our web server
+
+    cd /var/www/html
+
+Switch from out superuser to the magento user
+
+    su magento
+
+In order for Composer to work, it needs to be ran from within an empty directory.
+
+Check all file and folder inside the directory
+
+    ls -la
+
+Delete that test Apache file
+
+    rm index.html
+
+Tell composer to install Magento 2.3.5 
+This insignificant looking dot tells composer to install it in the same directory from where we are running the command from. Missing this dot will cause Magento to install somewhere else.
+
+    composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.5 .
+
+During the setup, you will be asked for a Username and a Password. Just to be clear, **Username = Public Key** and **Password = Private Key** what we created on the Magento website.
 <!--
 **dmitrijpotapcik/dmitrijpotapcik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
